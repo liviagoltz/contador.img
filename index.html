@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contador</title>
+    <img src="img/chapolim.pronto.png" alt="Chapolim Image">
+    <link rel="stylesheet" href="css">
+</head>
+<body>
+  <section>
+    <h1>Contador</h1>
+    <p>0</p>
+    <button onclick="aumentar()">+</button>
+    <button onclick="zerar()">0</button>
+    <button onclick="diminuir()">-</button> 
+    <button onclick="dividir()">÷2</button>
+    <button onclick="mil()">1.000</button> 
+    <button onclick="multiplicar()">x2</button> 
+  </section>
+  <script>let numero = 0
+
+    function aumentar(){
+        numero = numero +1
+        render()
+    }
+    function zerar(){
+        numero = numero - numero
+        render()
+    }
+    function diminuir(){
+        numero = numero -1
+        render()
+    }
+    function dividir(){
+        numero = numero /2
+        render()
+    }
+    function multiplicar(){
+        numero = numero * 2
+        render()
+    }
+    function mil(){
+        numero = numero +1000
+        render()
+    }
+    function render(){
+        const p = document.querySelector("p");    p.innerText = numero;
+       
+    }
+    </script>
+ 
+</body>
+</html>
